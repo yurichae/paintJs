@@ -4,9 +4,10 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+const clearBtn = document.getElementById("jsClear");
 
 const INITIAL_COLOR = ""
-const CANVAS_SIZE = 500;
+const CANVAS_SIZE = 600;
 
 canvas.width = CANVAS_SIZE; //canvas에 사이즈를 주어야 path가 보임
 canvas.height = CANVAS_SIZE;
@@ -15,7 +16,6 @@ ctx.fillStyle = "white";
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5;
-
 
 let painting = false;
 let filling = false;
@@ -37,6 +37,7 @@ function onMouseMove(event) {
         ctx.stroke();
     }
 }
+
 function onMouseDown(event) {
     painting = true;
 }
@@ -56,6 +57,9 @@ function handleCanvasClick(){
     if(filling) {
         ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
     }
+}
+function handleClearClick(){
+    ctx.clearRect(0, 0, 800, 600);
 }
 function handleCM(event){
     event.preventDefault()
@@ -99,4 +103,7 @@ if(mode){
 }
 if(saveBtn){
     saveBtn.addEventListener("click", handleSaveClick)
+}
+if(clearBtn){
+    clearBtn.addEventListener("click", handleClearClick)
 }
