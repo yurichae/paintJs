@@ -1,2 +1,2 @@
 # paintJs
-Painting Board made in VanilaJs
+Painting Board made in VanilaJs Canvas
