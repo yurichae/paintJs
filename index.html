@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuri's artstudio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="jsCanvas" class="canvas"></canvas>
-    <div class="controls">
-        <div class="controls_range">
-            <span>Brush Size</span>
-            <input type="range" name="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1"/>
-        </div>
-        <div class="controls_btns">
-            <button id="jsMode">Fill</button>
-            <button id="jsSave">Save</button>
-            <button id="jsClear">Clear</button>
-        </div>
-        <div class="controls_colors" id="Jscolors">
-            <div class="controls_color jsColor" style="background-color:#272727"></div>
-            <div class="controls_color jsColor" style="background-color:#FA5858"></div>
-            <div class="controls_color jsColor" style="background-color:#FABEBE"></div>
-            <div class="controls_color jsColor" style="background-color: #FFDB81"></div>
-            <div class="controls_color jsColor" style="background-color: #A3FEB0"></div>
-            <div class="controls_color jsColor" style="background-color:#9CE9FF"></div>
-            <div class="controls_color jsColor" style="background-color: #90AEFF"></div>
-            <div class="controls_color jsColor" style="background-color:#BA7EFD"></div>
-            <div class="controls_color jsColor" style="background-color: #fff"></div>
+    <div class="control-header">
+        <div>
+            <div class="controls_colors" id="Jscolors">
+                <div class="controls_color jsColor" style="background-color:#272727"></div>
+                <div class="controls_color jsColor" style="background-color:#FA5858"></div>
+                <div class="controls_color jsColor" style="background-color:#FABEBE"></div>
+                <div class="controls_color jsColor" style="background-color: #FFDB81"></div>
+                <div class="controls_color jsColor" style="background-color: #A3FEB0"></div>
+                <div class="controls_color jsColor" style="background-color:#9CE9FF"></div>
+                <div class="controls_color jsColor" style="background-color: #90AEFF"></div>
+                <div class="controls_color jsColor" style="background-color:#BA7EFD"></div>
+                <div class="controls_color jsColor" style="background-color: #fff"></div>
+            </div>
+            <div class="controls">
+                <div class="controls_range">
+                    <span><i class="fas fa-pen-fancy"></i></span>
+                    <input type="range" name="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1"/>
+                </div>
+                <div class="controls_btns">
+                    <button id="jsMode">Fill</i></button>
+                    <button id="jsSave"><i class="fas fa-save"></i></button>
+                    <button id="jsClear"><i class="fas fa-trash-alt"></i></i></button>
+                </div>
+            </div>
         </div>
     </div>
+    <canvas id="jsCanvas" class="canvas"></canvas>
+    <span class="copyright">Made by. Chae yuri</span>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 body{
-    background-color:#FBEFF8;
+    background-color:#eee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,32 +10,45 @@ body{
 }
 
 .canvas{
-    width: 600px;
-    height: 600px;
-    margin-top: 30px;
+    width: 1200px;
+    height: 1200px;
+    margin-top: 60px;
     background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
 }
-.controls{
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.control-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #eee;
+    box-shadow: px 2px 2px rgba(0,0,0,.5);
+}
+.control-header>div{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 .controls_colors{
+    width: 64%;
+    float: left;
+    display: flex;
+    padding-bottom: 20px;
+}
+.controls{
+    width: 36%;
+    float: left;
     display: flex;
 }
 .controls_color{
     width: 50px;
     height: 50px;
     margin: 5px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     cursor: pointer;
 }
 .controls .controls_btns{
-    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
 }
 .controls .controls_btns button{
     all:unset;
@@ -46,7 +59,6 @@ body{
     text-align: center;
     border-radius: 10px;
     text-transform: uppercase;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, .1);
     transition: .3s ease-out;
     font-weight: 600;
 }
@@ -55,5 +67,9 @@ body{
     color:#fff
 }
 .controls .controls_range {
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.copyright{
+    margin-top: 20px;
+    font-size: 14px;
 }

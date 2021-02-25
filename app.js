@@ -7,7 +7,7 @@ const saveBtn = document.getElementById("jsSave");
 const clearBtn = document.getElementById("jsClear");
 
 const INITIAL_COLOR = ""
-const CANVAS_SIZE = 600;
+const CANVAS_SIZE = 1200;
 
 canvas.width = CANVAS_SIZE; //canvas에 사이즈를 주어야 path가 보임
 canvas.height = CANVAS_SIZE;
@@ -59,7 +59,7 @@ function handleCanvasClick(){
     }
 }
 function handleClearClick(){
-    ctx.clearRect(0, 0, 800, 600);
+    ctx.clearRect(0, 0, 1200, 1200);
 }
 function handleCM(event){
     event.preventDefault()
@@ -78,7 +78,7 @@ function handleModeClick() {
         mode.innerText = "Fill" //filling이 flase일때 텍스트를 ""로 바꿔라
     } else {
         filling = true;
-        mode.innerText = "Paint"  //filling이 true일때 텍스트를 ""로 바꿔라
+        mode.innerText = "Draw"  //filling이 true일때 텍스트를 ""로 바꿔라
         ctx.fillStyle = ctx.strokeStyle
     }
 }
